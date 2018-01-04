@@ -1,12 +1,9 @@
-#game time
-
-x, y = input().split()
+#odd numbers
+x = input()
 
 x = int(x)
-y = int(y)
 
-if (x == y):
-	print("O JOGO DUROU 24 HORA(S)")
-else:
-	z = (((24-x)+y)%24)
-	print("O JOGO DUROU %d HORA(S)" % z)
+for i in range(1,x+1):
+	if ((i%2)==1):
+		print(i)
+
