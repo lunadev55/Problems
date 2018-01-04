@@ -1,4 +1,4 @@
-#odd numbers
+#positives and average
 
 ct = 0
 total = 0
