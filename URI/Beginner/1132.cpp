@@ -29,7 +29,7 @@ int main() {
         smallest = x;
     }
 
-    for (int i=x;i<=y;i++) {
+    for (int i=smallest;i<=biggest;i++) {
         if (i % 13 != 0) {
             sum += i;
         }
