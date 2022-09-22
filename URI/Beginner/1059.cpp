@@ -1,0 +1,20 @@
+#include <iostream>
+#include <cstdio>
+#include <cstdlib>
+#include <string>
+#include <math.h>
+
+using namespace std;
+
+int main()
+{
+    for (int i = 1; i <= 100; i++)
+    {
+        if (i % 2 == 0)
+        {
+            cout << i << endl;
+        }
+    }
+
+    return 0;
+}
