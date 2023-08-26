@@ -9,7 +9,7 @@ using System;
 class URI {
     static void Main(string[] args) { 
 
-        double value = Double.Parse(Console.ReadLine());
+        double value = Double.Parse(Console.ReadLine()!);
 
         // Banknotes
         Console.WriteLine("NOTAS:");
