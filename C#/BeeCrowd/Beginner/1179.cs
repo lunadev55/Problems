@@ -47,10 +47,7 @@ class URI
                 }
                 imparCount = 0;                
             }                            
-        }
-
-        Console.WriteLine($"imparCount = {imparCount}");
-        Console.WriteLine($"parCount = {parCount}");
+        }   
 
         for (int n = 0; n < imparCount; n++)
             Console.WriteLine($"impar[{n}] = {impar[n]}");
