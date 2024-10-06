@@ -1,38 +1,31 @@
-using System;
-using System.Collections.Specialized;
-using System.Collections.Generic;
-using System.Diagnostics.CodeAnalysis;
-using System.Net.NetworkInformation;
-using System.Runtime.Serialization;
-using System.Security.Cryptography.X509Certificates;
-
-class URI
-{
-    public static void Main(string[] args) 
-    {
-        // wrong answer (5%)
-        int testCases = Convert.ToInt32(Console.ReadLine());        
+using System; 
+class URI {
+    static void Main(string[] args) {   
+        int testCases = Convert.ToInt32(Console.ReadLine());
 
         while (testCases > 0)
         {
             string input = Console.ReadLine();
-            int value = Convert.ToInt32(input.Split(' ')[0]);
-            int odds = Convert.ToInt32(input.Split(' ')[1]);
+            string[] values = input.Split(' ');
 
-            int sum = 0; int numberOfConsecutiveOdds = 0;
-        
-            while (numberOfConsecutiveOdds < odds)
+            int x = Convert.ToInt32(values[0]);
+            int y = Convert.ToInt32(values[1]);
+
+            int yOdds = 0; int sum = 0;
+
+            while (true)
             {
-                if (value % 2 == 1)
+                if (yOdds == y)
+                    break;
+                if (x % 2 != 0)
                 {
-                    sum += value;
-                    numberOfConsecutiveOdds++;
-                }
-                value++;                    
-            }            
-            Console.WriteLine(sum);           
-
+                    yOdds++;
+                    sum += x;
+                }                
+                x++;
+            }
+            Console.WriteLine(sum);            
             testCases--;
         }
-    }       
+    }
 }
